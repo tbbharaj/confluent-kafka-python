@@ -88,7 +88,7 @@ elif [[ $pkgtype == deb ]]; then
 
 
     wget -qO - https://packages.confluent.io/deb/${CPVER}/archive.key | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://packages.confluent.io/deb/${CPVER} stable main"
+    sudo add-apt-repository "deb [arch=`uname -m`] https://packages.confluent.io/deb/${CPVER} stable main"
     sudo apt-get update
     sudo apt-get install -y confluent-librdkafka-plugins
 
