@@ -61,13 +61,13 @@ jobs:
     #script:
     #  - tools/wheels/build-wheels.bat x86 win32 dest wheelhouse
 
-    #- name: "Wheels: Linux x64"
-    #if: tag is present
-    #language: python
-    #python: "3.8"
-    #services: docker
-    #env: BUILD_WHEELS=1
-    #script: tools/wheels/build-wheels.sh ${LIBRDKAFKA_VERSION#v} wheelhouse
+  - name: "Wheels: Linux x64"
+    if: tag is present
+    language: python
+    python: "3.8"
+    services: docker
+    env: BUILD_WHEELS=1
+    script: tools/wheels/build-wheels.sh ${LIBRDKAFKA_VERSION#v} wheelhouse
 
     #- name: "Wheels: MacOSX x64"
     #if: tag is present
@@ -77,7 +77,7 @@ jobs:
     #script: tools/wheels/build-wheels.sh ${LIBRDKAFKA_VERSION#v} wheelhouse
     
   - name: "Wheels: Linux arm64"
-    #if: tag is present
+    if: tag is present
     language: python
     python: "3.8"
     services: docker
