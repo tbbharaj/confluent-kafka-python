@@ -12,13 +12,14 @@ jobs:
    # env: LD_LIBRARY_PATH="$PWD/tmp-build/lib"
    # services: docker
 
-   #- name: "Source package verification with Python 3.6 (Linux)"
-   # os: linux
-   # language: python
-   # dist: xenial
-   # python: "3.6"
-   # env: LD_LIBRARY_PATH="$PWD/tmp-build/lib"
-   # services: docker
+  - name: "Source package verification with Python 3.6 (Linux)"
+    os: linux
+    language: python
+    arch: arm64
+    dist: xenial
+    python: "3.6"
+    env: LD_LIBRARY_PATH="$PWD/tmp-build/lib"
+    services: docker
 
   # - name: "Source package verification with Python 2.7 (OSX)"
   #  os: osx
@@ -75,7 +76,7 @@ jobs:
     #env: BUILD_WHEELS=1
     #script: tools/wheels/build-wheels.sh ${LIBRDKAFKA_VERSION#v} wheelhouse
     
-  - name: "Wheels: Linux x64"
+  - name: "Wheels: Linux arm64"
     #if: tag is present
     language: python
     python: "3.8"
