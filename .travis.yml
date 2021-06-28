@@ -20,15 +20,15 @@ jobs:
     env: LD_LIBRARY_PATH="$PWD/tmp-build/lib"
     services: docker
 
-  - name: "Source package verification with Python 2.7 (OSX)"
-    os: osx
-    python: "2.7"
-    env: DYLD_LIBRARY_PATH="$PWD/tmp-build/lib" INTERPRETER_VERSION="2.7.17"
+  # - name: "Source package verification with Python 2.7 (OSX)"
+  #  os: osx
+  #  python: "2.7"
+  #  env: DYLD_LIBRARY_PATH="$PWD/tmp-build/lib" INTERPRETER_VERSION="2.7.17"
 
-  - name: "Source package verification with Python 3.6 (OSX) +docs"
-    os: osx
-    python: "3.6"
-    env: DYLD_LIBRARY_PATH="$PWD/tmp-build/lib" MK_DOCS="y" INTERPRETER_VERSION="3.6.5"
+  #- name: "Source package verification with Python 3.6 (OSX) +docs"
+  #  os: osx
+  #  python: "3.6"
+  #  env: DYLD_LIBRARY_PATH="$PWD/tmp-build/lib" MK_DOCS="y" INTERPRETER_VERSION="3.6.5"
 
     # - name: "Wheels: Windows x64"
     #if: tag is present
