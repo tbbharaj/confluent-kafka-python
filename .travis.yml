@@ -79,9 +79,9 @@ jobs:
     #if: tag is present
     language: python
     python: "3.7"
-    arch: arm64-graviton2
-    virt: vm
-    group: edge
+    arch: arm64
+      #virt: vm
+      #group: edge
     services: docker
     env:
       - BUILD_WHEELS=1
