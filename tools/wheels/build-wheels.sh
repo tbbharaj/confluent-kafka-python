@@ -56,7 +56,7 @@ esac
 
 $this_dir/install-librdkafka.sh $librdkafka_version dest; 
 #if [[ ${PLAT} == "aarch64" ]]; then export CIBW_BEFORE_BUILD="tools/wheels/install-librdkafka-arm64.sh $librdkafka_version"; else $this_dir/install-librdkafka.sh $librdkafka_version dest; fi;
-install_pkgs=cibuildwheel==1.11.0
+install_pkgs=cibuildwheel==1.0.0
 
 python3 -m pip install $install_pkgs ||
     pip3 install $install_pkgs
